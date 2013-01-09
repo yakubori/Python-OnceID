@@ -14,7 +14,7 @@ def toOnceID(dividend):
   once_id = ONCEB50[dividend] + once_id
   return once_id
 
-# Convert a OnceID back to an numeric ID.
+# Convert a OnceID back to a numeric ID.
 def fromOnceID(once_id):
   if not isinstance( once_id, (str) ) or once_id == '':
     return None
