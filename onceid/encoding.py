@@ -1,7 +1,12 @@
 from onceid import ONCEB50, ONCESIZE
 
-# Convert a numeric ID to a OnceID.
 def toOnceID(dividend):
+  """Convert a numeric ID to a OnceID.
+
+  Keyword arguments:
+  dividend -- the numeric value (int or long) to convert.
+
+  """
   if not isinstance(dividend, (int, long)) or dividend < 0:
     return None
   if dividend == 0: return ONCEB50[0]
@@ -14,8 +19,13 @@ def toOnceID(dividend):
   once_id = ONCEB50[dividend] + once_id
   return once_id
 
-# Convert a OnceID back to a numeric ID.
 def fromOnceID(once_id):
+  """Convert a OnceID back to a numeric ID.
+
+  Keyword arguments:
+  once_id -- the OnceID value to convert.
+
+  """
   if not isinstance( once_id, (str) ) or once_id == '':
     return None
   id_split = list(once_id)

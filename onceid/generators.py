@@ -2,14 +2,21 @@ import random
 
 from onceid import ONCEB50, ONCESIZE
 
-# Generate a random 11-character OnceID.
-def getOnceID(): return getMyOnceID()
+def getOnceID():
+  """Generate a random 11-character OnceID."""
+  return getMyOnceID()
 
-# Generate a random 8-character OnceID.
-def getShortOnceID(): return getMyOnceID(8)
+def getShortOnceID():
+  """Generate a random 8-character OnceID."""
+  return getMyOnceID(8)
 
-# Generate a random n-character OnceID.
 def getMyOnceID(l = 11):
+  """Generate a random n-character OnceID.
+
+  Keyword arguments:
+  l -- the desired character length of the OnceID (default 11).
+
+  """
   if not isinstance(l, (int, long)) or l < 3:
     return None
   once_id = ''
